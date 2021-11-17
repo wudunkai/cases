@@ -1,0 +1,11 @@
+<!--pages/tracks/tracks.wxml-->
+<view class='content' wx:if='{{list.length==0}}'>
+  <image class='empty' src='../../images/common/empty.png'></image>  
+  <view class='empty-text'>哦呀，TA什么都没有评论</view>
+</view>
+<view class='content' wx:else>
+  <navigator url='/pages/getdetail/getdetail?details={{item.movieid}}' wx:for='{{list}}' wx:key="index" class='comment-title'>
+    <view>{{item.title}}</view>
+    <view class='comment-ok'>已评论</view>
+  </navigator>
+</view>

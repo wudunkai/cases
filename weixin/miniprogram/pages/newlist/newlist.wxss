@@ -1,0 +1,13 @@
+/* pages/newlist/newlist.wxss */
+.content {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.news1-list {
+  width: 23%;
+  margin: 0 5.1% 2% 5.1%;
+  display: inline-block;
+  height:320rpx;
+  font-size:100%;
+}

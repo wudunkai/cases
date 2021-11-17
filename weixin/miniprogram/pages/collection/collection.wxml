@@ -1,0 +1,16 @@
+<!--pages/collection/collection.wxml-->
+<view class='content' wx:if='{{list.length==0}}'>
+  <image class='empty' src='../../images/common/empty.png'></image>  
+  <view class='empty-text'>哦呀，TA什么都没有收藏</view>
+</view>
+<view class='content' wx:else>
+  <navigator url="/pages/getdetail/getdetail?details={{item.detail}}" class='news1-list' wx:for='{{list}}' wx:key='{{index}}'>
+    <image src='{{item.image}}' class='new-img'></image>
+    <view class='new-text new1-text'>{{item.name}}</view>
+     <van-rate wx:if='{{!item.stars==0}}' allow-half readonly size='{{10}}' custom-class='customrate' value="{{item.stars/2}}"/>
+    <van-rate wx:else readonly size='{{10}}' custom-class='customrate' color="#fff" void-color="#fff" value="{{item.stars/2}}"/>
+    <view class='new2-score' wx:if='{{item.stars==0}}'>暂无评分</view>
+    <view class='new-score' wx:elif='{{item.stars%1===0}}'>{{item.stars+'.0'}}</view>
+    <view class='new-score' wx:else>{{item.stars}}</view>
+  </navigator>
+</view>

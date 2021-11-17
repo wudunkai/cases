@@ -1,0 +1,21 @@
+<!--pages/feedback/feedback.wxml-->
+<van-cell-group>
+  <van-field
+    value="{{ message }}"
+    label="留言"
+    type="textarea"
+    placeholder="说一下意见吧，反正你反馈了我也不看。"
+    autosize
+    border="{{ true }}"
+    bind:change="onChangemessage"
+  />
+</van-cell-group>
+<van-cell-group>
+  <van-field
+    value="{{ value }}"
+    placeholder="联系方式（微信）"
+    border="{{ true }}"
+    bind:change="onChangevalue"
+  />
+</van-cell-group>
+<van-button size="large" type="primary" bindtap='submit'>提交</van-button>

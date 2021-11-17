@@ -1,0 +1,10 @@
+<!--pages/aboutUs/aboutUs.wxml-->
+<view class="content">
+    <!--pics文件夹下的background.jpg文件-->
+    <image class='background' src="../../images/common/me.jpg" mode="aspectFill"></image>
+    <!--页面其它部分-->
+</view>
+<view class='text'>
+  <text>异刃丶</text>
+  <view>当前版本v1.0.0</view>
+</view>

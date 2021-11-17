@@ -1,0 +1,131 @@
+/**app.wxss**/
+button {
+  background: initial;
+}
+
+button:focus{
+  outline: 0;
+}
+
+button::after{
+  border: none;
+}
+.navigator-hover {
+  background-color: rgba(0, 0, 0, 0.0);
+}
+/* 搜索样式 */
+.customsearch {
+  background:#44b549 !important; 
+}
+.van-search__content {
+  border-radius: 10rpx !important;
+}
+/* 电影样式 */
+.content {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.news1-list {
+  width: 23%;
+  margin: 0 5.1% 2% 5.1%;
+  display: inline-block;
+  height:320rpx;
+  font-size:100%;
+}
+
+/* 新闻标题样式 */
+.news-title {
+  margin: 2%;
+  font-size: 75%;
+  display: flex;
+  justify-content: space-between
+}
+.list {
+  color:black;
+}
+.list-url {
+  background: #fff;
+  color: #44b549; 
+}
+/* 新闻样式 */
+.scroll-view_H {
+  width: 100%;
+  height: 320rpx;
+  white-space: nowrap;
+}
+.news-list {
+  width: 23%;
+  height: 320rpx;
+  margin-left: 2%;
+  display: inline-block;
+  font-size: 100%;
+}
+.news-list:last-child {
+  margin-right: 2%; 
+}
+.new-img {
+  height: 250rpx;
+  width: 100%;
+  border-radius: 8rpx;
+}
+.new-text {
+  font-size: 60%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.customrate {
+  top: -15rpx;
+  position: relative;
+}
+.customrate .van-rate__item {
+  padding: 0 !important;
+}
+.customrate .van-rate__item .van-rate__icon--half {
+  left: 0 !important;
+}
+.new1-text {
+  text-align: center;
+}
+.new-score {
+  font-size: 50%;
+  color:#999;
+  position: relative;
+  top: -45rpx;
+  right: -130rpx;
+  width: 35rpx;
+}
+.new1-score {
+  font-size: 50%;
+  color:#999;
+  position: relative;
+  top: -45rpx;
+  width: 30rpx;
+}
+.new2-score {
+  font-size: 50%;
+  color:#999;
+  position: relative;
+  top: -45rpx;
+  text-align: center;
+}
+/* 没有收藏足迹样式 */
+.empty {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  width: 223px;
+  height: 141px;
+}
+.empty-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  font-size: 80%;
+  color: #666;
+}

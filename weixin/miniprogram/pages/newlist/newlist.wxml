@@ -1,0 +1,12 @@
+<!--pages/newlist/newlist.wxml-->
+<view class='content'>
+  <navigator url="/pages/getdetail/getdetail?details={{item.id}}" class='news1-list' wx:for='{{list}}' wx:key='{{index}}'>
+    <image src='{{item.images.small}}' class='new-img'></image>
+    <view class='new-text new1-text'>{{item.title}}</view>
+     <van-rate wx:if='{{!item.rating.average==0}}' allow-half readonly size='{{10}}' custom-class='customrate' value="{{item.rating.average/2}}"/>
+    <van-rate wx:else readonly size='{{10}}' custom-class='customrate' color="#fff" void-color="#fff" value="{{item.rating.average/2}}"/>
+    <view class='new2-score' wx:if='{{item.rating.average==0}}'>暂无评分</view>
+    <view class='new-score' wx:elif='{{item.rating.average%1===0}}'>{{item.rating.average+'.0'}}</view>
+    <view class='new-score' wx:else>{{item.rating.average}}</view>
+  </navigator>
+</view>

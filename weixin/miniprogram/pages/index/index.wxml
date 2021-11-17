@@ -1,0 +1,58 @@
+<!--pages/index/index.wxml-->
+<!-- 搜索 -->
+<navigator class='search-to' url='/pages/search/search'>
+  <van-search placeholder="搜索" custom-class="customsearch" disabled="false"/>
+</navigator>
+<!-- 电影 -->
+<view class='news-content'>
+  <view class='news'>
+    <!-- 影院热映 -->
+    <view class="news-title">
+      <text class='list'>影院热映</text> 
+      <navigator url="/pages/newlist/newlist?title=影院热映" class='list-url'>查看更多</navigator>
+    </view>
+    <scroll-view class="scroll-view_H" scroll-x >
+      <navigator class='news-list' wx:for='{{list1}}' wx:key='{{index}}' url="/pages/getdetail/getdetail?details={{item.id}}">
+        <image src='{{item.images.small}}' class='new-img'></image>
+        <view class='new-text'>{{item.title}}</view>
+        <van-rate wx:if='{{!item.rating.average==0}}' allow-half readonly size='{{10}}' custom-class='customrate' value="{{item.rating.average/2}}"/>
+        <van-rate wx:else readonly size='{{10}}' custom-class='customrate' color="#fff" void-color="#fff" value="{{item.rating.average/2}}"/>
+        <view class='new1-score' wx:if='{{item.rating.average==0}}'>暂无评分</view>
+        <view class='new-score' wx:elif='{{item.rating.average%1===0}}'>{{item.rating.average+'.0'}}</view>
+        <view class='new-score' wx:else>{{item.rating.average}}</view>
+      </navigator>
+    </scroll-view>
+    <!-- 即将上映 -->
+    <view class="news-title">
+      <text class='list'>即将上映</text>
+      <navigator url="/pages/newlist/newlist?title=即将上映" class='list-url'>查看更多</navigator>
+    </view>
+    <scroll-view class="scroll-view_H" scroll-x >
+      <navigator class='news-list' wx:for='{{list2}}' wx:key='{{index}}' url="/pages/getdetail/getdetail?details={{item.id}}">
+        <image src='{{item.images.small}}' class='new-img'></image>
+        <view class='new-text'>{{item.title}}</view>
+        <van-rate wx:if='{{!item.rating.average==0}}' allow-half readonly size='{{10}}' custom-class='customrate' value="{{item.rating.average/2}}"/>
+        <van-rate wx:else readonly size='{{10}}' custom-class='customrate' color="#fff" void-color="#fff" value="{{item.rating.average/2}}"/>
+        <view class='new1-score' wx:if='{{item.rating.average==0}}'>暂无评分</view>
+        <view class='new-score' wx:elif='{{item.rating.average%1===0}}'>{{item.rating.average+'.0'}}</view>
+        <view class='new-score' wx:else>{{item.rating.average}}</view>
+      </navigator>
+    </scroll-view>
+    <!-- 电影Top250 -->
+    <view class="news-title">
+      <text class='list'>电影Top250</text>
+      <navigator url="/pages/newlist/newlist?title=电影Top250" class='list-url'>查看更多</navigator>
+    </view>
+    <scroll-view class="scroll-view_H" scroll-x >
+      <navigator class='news-list' wx:for='{{list3}}' wx:key='{{index}}' url="/pages/getdetail/getdetail?details={{item.id}}">
+        <image src='{{item.images.small}}' class='new-img'></image>
+        <view class='new-text'>{{item.title}}</view>
+        <van-rate wx:if='{{!item.rating.average==0}}' allow-half readonly size='{{10}}' custom-class='customrate' value="{{item.rating.average/2}}"/>
+        <van-rate wx:else readonly size='{{10}}' custom-class='customrate' color="#fff" void-color="#fff" value="{{item.rating.average/2}}"/>
+        <view class='new1-score' wx:if='{{item.rating.average==0}}'>暂无评分</view>
+        <view class='new-score' wx:elif='{{item.rating.average%1===0}}'>{{item.rating.average+'.0'}}</view>
+        <view class='new-score' wx:else>{{item.rating.average}}</view>
+      </navigator>
+    </scroll-view>
+  </view>
+</view>

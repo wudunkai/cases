@@ -1,0 +1,18 @@
+/* pages/comment/comment.wxss */
+.content {
+  width: 90%;
+  height: 100%;
+  padding: 5% 5% 0 5%;
+  font-size: 100%;
+  text-align: center;
+}
+.title {
+  font-size: 60%;
+  color: #666;
+  letter-spacing: 2rpx;
+  padding-bottom: 3%; 
+}
+.van-button--large { 
+  width: 90% !important;
+  margin: 0 5%; 
+}

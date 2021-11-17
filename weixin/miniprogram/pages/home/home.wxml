@@ -1,0 +1,27 @@
+<!--pages/home/home.wxml-->
+<view class='container'>
+  <view class='content'>
+    <view class='home' wx:if="{{login}}">
+      <view class='home-img'>
+        <open-data type='userAvatarUrl'></open-data>
+      </view>
+      <view>
+        <open-data type='userNickName' class='home-name'></open-data>
+      </view>
+      <view></view>
+    </view>
+    <button wx:if="{{!login}}" class='home-login' open-type='getUserInfo' bindgetuserinfo='ongetuserinfo'>登录</button>
+  </view>
+  <view class='nav'>
+    <view class='me'>
+      <!-- 我的收藏 -->
+      <navigator class='nav-me' bindtap='me' url='{{collection}}'><van-icon name="star-o" color='#44b549' custom-class="iconcustom"/><text>我的收藏</text><view>{{star}}次</view></navigator>
+      <!-- 我的足迹 -->
+      <navigator class='nav-me' bindtap='me' url='{{tracks}}'><van-icon name="thumb-circle-o" color='#44b549' custom-class="iconcustom"/><text>我的足迹</text><view>{{thumb}}次</view></navigator>
+    </view>
+    <!-- 意见反馈 -->
+    <navigator class='nav-text' url="/pages/feedback/feedback">意见反馈</navigator>
+    <!-- 关于我们 -->
+    <navigator class='nav-text' url="/pages/aboutUs/aboutUs">关于我们</navigator>
+  </view>
+</view>

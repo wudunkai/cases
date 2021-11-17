@@ -1,0 +1,60 @@
+<!--pages/getdetail/getdetail.wxml-->
+<view class='content'>
+  <!-- 电影头部 -->
+  <view class='detail-header'>
+    <image class='header-img' src="{{info.images.small}}"></image>
+    <!-- 电影介绍 -->
+    <view class='header-content'>
+      <view class='header-title'>{{info.title}}({{info.year}})</view>
+      <view class='header-original_title'>{{info.original_title}}({{info.year}})</view>
+      <view class='header-genres'>{{info.genres[0]}} {{info.genres[1]}} {{info.genres[2]}} / {{info.countries}} / 片长{{info.durations[0]}}</view>
+      <view class='text'>
+        <view>
+          <!-- 想看 -->
+          <van-button wx:if="{{like}}" class='nav-text' bindtap='collection1' size="small"><van-icon name="like-o" color="orange"/>想看</van-button>
+          <van-button wx:elif="{{!like}}" disabled class='nav-text' bindtap='collection2' size="small"><van-icon name="like" color="orange"/>已收藏</van-button>
+        </view>
+        <view>
+          <!-- 评论 -->
+          <van-button wx:if="{{star}}" class='nav-text' size="small" bindtap='comment1' data-id='{{info.id}}'><van-icon name="star-o" color="orange"/>评论</van-button>
+          <van-button wx:elif="{{!star}}" disabled  class='nav-text' size="small" bindtap='comment2'><van-icon name="star" color="orange" />已评论</van-button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 简介 -->
+  <view class='common-title'>
+    <text>简介</text>
+    <view class='detail-desc'>{{info.summary}}</view>
+  </view>
+  <!-- 影人 -->
+  <view class='common-title'>
+    <view>影人</view>
+    <scroll-view class="scroll-view_H" scroll-x style='padding-top:5%;height:340rpx;'>
+      <view class='filmmaker-list' wx:for='{{filmmaker}}' wx:key='{{index}}'>
+        <image src='{{item.avatars.small}}' class='filmmaker-img'></image>
+        <view class='filmmaker-name'>{{item.name}}</view>
+        <view class='filmmaker-position'>演员</view>
+      </view>
+    </scroll-view>  
+  </view>
+  <!-- 预告片/剧情 -->
+  <view class='common-title'>
+    <view>预告片/剧情</view>
+    <scroll-view class="scroll-view_H" scroll-x style='padding-top:5%;height:270rpx;'>
+      <image src='{{item.cover}}' class='plot-img' wx:for='{{photos}}' wx:key='{{index}}' data-index='{{index}}' bindtap='previewImg'></image>
+    </scroll-view>  
+  </view>
+  <!-- 短评 -->
+  <view class='common-title'>
+    <view>短评</view>
+    <view class='comm'>
+      <view class='comment' wx:for="{{comment}}" wx:key='{{index}}'>
+        <image src="{{item.avatarUrl}}" class='comment-img'></image>
+        <text class='comment-name'>{{item.nickName}}</text>
+        <van-rate allow-half readonly size='{{10}}' value="{{item.stars}}"/>
+        <view class='comment-text'>{{item.comment}}</view>
+      </view>
+    </view>
+  </view>
+</view>

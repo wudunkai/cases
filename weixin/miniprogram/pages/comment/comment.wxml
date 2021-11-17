@@ -1,0 +1,17 @@
+<!--pages/comment/comment.wxml-->
+<view class='content'>
+  <view class='title'>点击星星评分</view>
+  <van-rate value="{{ value }}" bind:change="onChange" color='orange'/>
+  <van-cell-group>
+  <van-field
+    value="{{ message }}"
+    label="评论"
+    type="textarea"
+    placeholder="写几句评论吧..."
+    autosize
+    border="{{ true }}"
+    bind:change="onChangemessage"
+  />
+</van-cell-group>
+</view>
+<van-button size="large" type="primary" bindtap='submit'>提交</van-button>

@@ -1,0 +1,7 @@
+/* pages/index/index.wxss */
+.news {
+  width: 100%;
+}
+.new-content {
+  margin: 0 auto;
+}

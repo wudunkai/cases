@@ -1,0 +1,10 @@
+<!--pages/search/search.wxml-->
+<!-- 搜索 -->
+<van-search value="{{value}}" placeholder="请输入搜索关键词" focus bind:change='onChange' custom-class="customsearch"/>
+<!-- 内容 -->
+<view class='content'>
+  {{value}}
+</view>
+<view class='content'>
+  目前没有搜索api
+</view>
