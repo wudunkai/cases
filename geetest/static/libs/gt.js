@@ -18,7 +18,7 @@
     } else {
         factory(global);
     }
-})(typeof window !== "undefined" ? window : this, function (window, noGlobal) {
+})(typeof window !== "undefined" ? window : this, function (window) {
     "use strict";
     if (typeof window === 'undefined') {
         throw new Error('Geetest requires browser environment');
@@ -34,8 +34,10 @@
     _Object.prototype = {
         _each: function (process) {
             var _obj = this._obj;
+            console.log(_obj);
             for (var k in _obj) {
-                if (_obj.hasOwnProperty(k)) {
+                console.log(k);
+                if (_obj.hasOwnProperty.call(_obj, k)) {
                     process(k, _obj[k]);
                 }
             }
@@ -113,8 +115,8 @@
         script.onload = script.onreadystatechange = function () {
             if (!loaded &&
                 (!script.readyState ||
-                "loaded" === script.readyState ||
-                "complete" === script.readyState)) {
+                    "loaded" === script.readyState ||
+                    "complete" === script.readyState)) {
 
                 loaded = true;
                 setTimeout(function () {
@@ -201,6 +203,7 @@
             try {
                 delete window[cb];
             } catch (e) {
+                console.log(e);
             }
         };
         load(config.protocol, domains, path, {
@@ -229,12 +232,14 @@
         status.slide = "loaded";
     }
     var initGeetest = function (userConfig, callback) {
+        // console.log(userConfig);
         var config = new Config(userConfig);
         if (userConfig.https) {
             config.protocol = 'https://';
         } else if (!userConfig.protocol) {
             config.protocol = window.location.protocol + '//';
         }
+        console.log(config);
         jsonp([config.api_server || config.apiserver], config.type_path, config, function (newConfig) {
             var type = newConfig.type;
             var init = function () {
@@ -274,4 +279,3 @@
     window.initGeetest = initGeetest;
     return initGeetest;
 });
-
