@@ -1,0 +1,864 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.42.1",
+  "hash": "7f80ab343d2277a41e01",
+  "time": 2028,
+  "builtAt": 1587365365764,
+  "publicPath": "/",
+  "outputPath": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\dist\\",
+  "assetsByChunkName": {
+    "index": [
+      "index.17f1ca20.bundle.js",
+      "index.17f1ca20.bundle.js.map"
+    ]
+  },
+  "assets": [
+    {
+      "name": "assets/logo.jpg",
+      "size": 14960,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true
+    },
+    {
+      "name": "assets/logo.png",
+      "size": 8046,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true
+    },
+    {
+      "name": "index.17f1ca20.bundle.js",
+      "size": 1456,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "index"
+      ],
+      "info": {
+        "immutable": true
+      },
+      "emitted": true
+    },
+    {
+      "name": "index.17f1ca20.bundle.js.LICENSE.txt",
+      "size": 26,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true
+    },
+    {
+      "name": "index.17f1ca20.bundle.js.map",
+      "size": 92,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "index"
+      ],
+      "info": {
+        "development": true
+      },
+      "emitted": true
+    },
+    {
+      "name": "index.html",
+      "size": 498,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true
+    },
+    {
+      "name": "vue_dll.js",
+      "size": 148525,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": true
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "index": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "index.17f1ca20.bundle.js",
+        "index.17f1ca20.bundle.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "index": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "index.17f1ca20.bundle.js",
+        "index.17f1ca20.bundle.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "chunks": [
+    {
+      "id": 0,
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 2577,
+      "names": [
+        "index"
+      ],
+      "files": [
+        "index.17f1ca20.bundle.js",
+        "index.17f1ca20.bundle.js.map"
+      ],
+      "hash": "d5874e82ffe0fcd7064c",
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "delegated 2 from dll-reference vue_dll",
+          "name": "delegated ./node_modules/vue/dist/vue.js from dll-reference vue_dll",
+          "index": 1,
+          "index2": 1,
+          "size": 42,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+          "issuerId": 3,
+          "issuerName": "./src/index.js",
+          "issuerPath": [
+            {
+              "id": 3,
+              "identifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+              "name": "./src/index.js",
+              "profile": {
+                "factory": 55,
+                "building": 1067
+              }
+            }
+          ],
+          "profile": {
+            "factory": 8,
+            "building": 0,
+            "dependencies": 0
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "vue/dist/vue.js",
+              "loc": "60:0-34"
+            },
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "vue/dist/vue.js",
+              "loc": "63:0-3"
+            },
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "vue/dist/vue.js",
+              "loc": "79:4-7"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 1
+        },
+        {
+          "id": 1,
+          "identifier": "delegated 6 from dll-reference vue_dll",
+          "name": "delegated ./node_modules/vue-router/dist/vue-router.esm.js from dll-reference vue_dll",
+          "index": 3,
+          "index2": 2,
+          "size": 42,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+          "issuerId": 3,
+          "issuerName": "./src/index.js",
+          "issuerPath": [
+            {
+              "id": 3,
+              "identifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+              "name": "./src/index.js",
+              "profile": {
+                "factory": 55,
+                "building": 1067
+              }
+            }
+          ],
+          "profile": {
+            "factory": 8,
+            "building": 0,
+            "dependencies": 0
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "type": "harmony side effect evaluation",
+              "userRequest": "vue-router",
+              "loc": "62:0-35"
+            },
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "vue-router",
+              "loc": "63:8-17"
+            },
+            {
+              "moduleId": 3,
+              "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+              "module": "./src/index.js",
+              "moduleName": "./src/index.js",
+              "type": "harmony import specifier",
+              "userRequest": "vue-router",
+              "loc": "70:17-26"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": [
+            "default"
+          ],
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 1
+        },
+        {
+          "id": 2,
+          "identifier": "external \"vue_dll\"",
+          "name": "external \"vue_dll\"",
+          "index": 2,
+          "index2": 0,
+          "size": 42,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": "delegated 2 from dll-reference vue_dll",
+          "issuerId": 0,
+          "issuerName": "delegated ./node_modules/vue/dist/vue.js from dll-reference vue_dll",
+          "issuerPath": [
+            {
+              "id": 3,
+              "identifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+              "name": "./src/index.js",
+              "profile": {
+                "factory": 55,
+                "building": 1067
+              }
+            },
+            {
+              "id": 0,
+              "identifier": "delegated 2 from dll-reference vue_dll",
+              "name": "delegated ./node_modules/vue/dist/vue.js from dll-reference vue_dll",
+              "profile": {
+                "factory": 8,
+                "building": 0,
+                "dependencies": 0
+              }
+            }
+          ],
+          "profile": {
+            "factory": 0,
+            "building": 0
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": 0,
+              "moduleIdentifier": "delegated 2 from dll-reference vue_dll",
+              "module": "delegated ./node_modules/vue/dist/vue.js from dll-reference vue_dll",
+              "moduleName": "delegated ./node_modules/vue/dist/vue.js from dll-reference vue_dll",
+              "type": "delegated source",
+              "userRequest": "dll-reference vue_dll"
+            },
+            {
+              "moduleId": 1,
+              "moduleIdentifier": "delegated 6 from dll-reference vue_dll",
+              "module": "delegated ./node_modules/vue-router/dist/vue-router.esm.js from dll-reference vue_dll",
+              "moduleName": "delegated ./node_modules/vue-router/dist/vue-router.esm.js from dll-reference vue_dll",
+              "type": "delegated source",
+              "userRequest": "dll-reference vue_dll"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 2
+        },
+        {
+          "id": 3,
+          "identifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+          "name": "./src/index.js",
+          "index": 0,
+          "index2": 3,
+          "size": 2451,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "profile": {
+            "factory": 55,
+            "building": 1067
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "./src/index.js",
+              "loc": "index"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": [],
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is an entry point"
+          ],
+          "depth": 0,
+          "source": "// 全局\n// import和export必须写在顶级作用域中，否则会报错，因为是静态导入\n// let a = 1\n//   import $ from 'jquery'\n// if( a = 1){\n// } else {\n//   import $ from 'webpack'\n// }\n// import('jquery').then(({ default: $ })=>{\n//   // 执行resolve时就表示jquery导入完成了\n//   $(function() {\n//     $('<div></div>').html(\"我是index\").appendTo('body')\n//   })\n// })\n// $(function() {\n//   $('<div></div>').html('我是main1').appendTo('body')\n// })\n// function getComponent() {\n//   return import('jquery').then(({ default: $ }) => {\n//     return $('<div></div>').html('main')\n//   })\n// }\n// getComponent().then(item => {\n//   item.appendTo('body')\n// })\n// 需求: 当用户点击按钮时  添加一个div\n// $(function() {\n//   $('#btn').click(function() {\n//     $('<div></div>').html('我是main').appendTo('body')\n//   })\n// })\n// window.onload = function() {\n//   document.getElementById('btn').onclick = function() {\n//     // 当用户点击按钮时才会执行\n//     $('<div></div>').html('我是main').appendTo('body')\n//   }\n// }\n// 懒加载\n// window.onload = function () {\n//   document.getElementById('btn').onclick = function () {\n//     // 当用户点击按钮时才会执行\n//     getComponent().then(item => {\n//       item.appendTo('body')\n//     })\n//   }\n// }\n// // 动态导入\n// function getComponent() {\n//   return import(/* webpackPrefetch: true */ 'jquery').then(({ default: $ }) => {\n//     return $('<div></div>').html('我是main')\n//   })\n// }\n// import moment from 'moment'\n// // 手动引入\n// import 'moment/locale/zh-cn'\n// // 设置语言\n// moment.locale('zh-CN')\n// console.log(moment().subtract(6, 'days').calendar())\n// import vue from 'vue' // runtime-only 的 vue 包\nimport Vue from 'vue/dist/vue.js'; // 完整版的vuejs\n\nimport VueRouter from 'vue-router';\nVue.use(VueRouter);\nvar homeComponent = {\n  template: '<h2>我是homeaaa页面</h2>'\n};\nvar newsComponent = {\n  template: '<h2>我是newsheiheihei页面</h2>'\n};\nvar router = new VueRouter({\n  routes: [{\n    path: '/home',\n    component: homeComponent\n  }, {\n    path: '/news',\n    component: newsComponent\n  }]\n});\nnew Vue({\n  el: '#app',\n  data: {\n    msg: 'helloworld'\n  },\n  router: router\n}); // react\n// import React from 'react'\n// import ReactDOM from 'react-dom'\n// let reactNode = React.createElement('h1', null, '我很酷的！！')\n// ReactDOM.render(reactNode, document.getElementById('app'))"
+        }
+      ],
+      "filteredModules": 0,
+      "origins": [
+        {
+          "module": "",
+          "moduleIdentifier": "",
+          "moduleName": "",
+          "loc": "index",
+          "request": "./src/index.js",
+          "reasons": []
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "id": 0,
+      "identifier": "delegated 2 from dll-reference vue_dll",
+      "name": "delegated ./node_modules/vue/dist/vue.js from dll-reference vue_dll",
+      "index": 1,
+      "index2": 1,
+      "size": 42,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+      "issuerId": 3,
+      "issuerName": "./src/index.js",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+          "name": "./src/index.js",
+          "profile": {
+            "factory": 55,
+            "building": 1067
+          }
+        }
+      ],
+      "profile": {
+        "factory": 8,
+        "building": 0,
+        "dependencies": 0
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "vue/dist/vue.js",
+          "loc": "60:0-34"
+        },
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "vue/dist/vue.js",
+          "loc": "63:0-3"
+        },
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "vue/dist/vue.js",
+          "loc": "79:4-7"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 1
+    },
+    {
+      "id": 1,
+      "identifier": "delegated 6 from dll-reference vue_dll",
+      "name": "delegated ./node_modules/vue-router/dist/vue-router.esm.js from dll-reference vue_dll",
+      "index": 3,
+      "index2": 2,
+      "size": 42,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+      "issuerId": 3,
+      "issuerName": "./src/index.js",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+          "name": "./src/index.js",
+          "profile": {
+            "factory": 55,
+            "building": 1067
+          }
+        }
+      ],
+      "profile": {
+        "factory": 8,
+        "building": 0,
+        "dependencies": 0
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "type": "harmony side effect evaluation",
+          "userRequest": "vue-router",
+          "loc": "62:0-35"
+        },
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "vue-router",
+          "loc": "63:8-17"
+        },
+        {
+          "moduleId": 3,
+          "moduleIdentifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+          "module": "./src/index.js",
+          "moduleName": "./src/index.js",
+          "type": "harmony import specifier",
+          "userRequest": "vue-router",
+          "loc": "70:17-26"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": [
+        "default"
+      ],
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 1
+    },
+    {
+      "id": 2,
+      "identifier": "external \"vue_dll\"",
+      "name": "external \"vue_dll\"",
+      "index": 2,
+      "index2": 0,
+      "size": 42,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": "delegated 2 from dll-reference vue_dll",
+      "issuerId": 0,
+      "issuerName": "delegated ./node_modules/vue/dist/vue.js from dll-reference vue_dll",
+      "issuerPath": [
+        {
+          "id": 3,
+          "identifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+          "name": "./src/index.js",
+          "profile": {
+            "factory": 55,
+            "building": 1067
+          }
+        },
+        {
+          "id": 0,
+          "identifier": "delegated 2 from dll-reference vue_dll",
+          "name": "delegated ./node_modules/vue/dist/vue.js from dll-reference vue_dll",
+          "profile": {
+            "factory": 8,
+            "building": 0,
+            "dependencies": 0
+          }
+        }
+      ],
+      "profile": {
+        "factory": 0,
+        "building": 0
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": 0,
+          "moduleIdentifier": "delegated 2 from dll-reference vue_dll",
+          "module": "delegated ./node_modules/vue/dist/vue.js from dll-reference vue_dll",
+          "moduleName": "delegated ./node_modules/vue/dist/vue.js from dll-reference vue_dll",
+          "type": "delegated source",
+          "userRequest": "dll-reference vue_dll"
+        },
+        {
+          "moduleId": 1,
+          "moduleIdentifier": "delegated 6 from dll-reference vue_dll",
+          "module": "delegated ./node_modules/vue-router/dist/vue-router.esm.js from dll-reference vue_dll",
+          "moduleName": "delegated ./node_modules/vue-router/dist/vue-router.esm.js from dll-reference vue_dll",
+          "type": "delegated source",
+          "userRequest": "dll-reference vue_dll"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": null,
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is not an ECMAScript module"
+      ],
+      "depth": 2
+    },
+    {
+      "id": 3,
+      "identifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\babel-loader\\lib\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.js",
+      "name": "./src/index.js",
+      "index": 0,
+      "index2": 3,
+      "size": 2451,
+      "cacheable": true,
+      "built": true,
+      "optional": false,
+      "prefetched": false,
+      "chunks": [
+        0
+      ],
+      "issuer": null,
+      "issuerId": null,
+      "issuerName": null,
+      "issuerPath": null,
+      "profile": {
+        "factory": 55,
+        "building": 1067
+      },
+      "failed": false,
+      "errors": 0,
+      "warnings": 0,
+      "assets": [],
+      "reasons": [
+        {
+          "moduleId": null,
+          "moduleIdentifier": null,
+          "module": null,
+          "moduleName": null,
+          "type": "single entry",
+          "userRequest": "./src/index.js",
+          "loc": "index"
+        }
+      ],
+      "usedExports": true,
+      "providedExports": [],
+      "optimizationBailout": [
+        "ModuleConcatenation bailout: Module is an entry point"
+      ],
+      "depth": 0,
+      "source": "// 全局\n// import和export必须写在顶级作用域中，否则会报错，因为是静态导入\n// let a = 1\n//   import $ from 'jquery'\n// if( a = 1){\n// } else {\n//   import $ from 'webpack'\n// }\n// import('jquery').then(({ default: $ })=>{\n//   // 执行resolve时就表示jquery导入完成了\n//   $(function() {\n//     $('<div></div>').html(\"我是index\").appendTo('body')\n//   })\n// })\n// $(function() {\n//   $('<div></div>').html('我是main1').appendTo('body')\n// })\n// function getComponent() {\n//   return import('jquery').then(({ default: $ }) => {\n//     return $('<div></div>').html('main')\n//   })\n// }\n// getComponent().then(item => {\n//   item.appendTo('body')\n// })\n// 需求: 当用户点击按钮时  添加一个div\n// $(function() {\n//   $('#btn').click(function() {\n//     $('<div></div>').html('我是main').appendTo('body')\n//   })\n// })\n// window.onload = function() {\n//   document.getElementById('btn').onclick = function() {\n//     // 当用户点击按钮时才会执行\n//     $('<div></div>').html('我是main').appendTo('body')\n//   }\n// }\n// 懒加载\n// window.onload = function () {\n//   document.getElementById('btn').onclick = function () {\n//     // 当用户点击按钮时才会执行\n//     getComponent().then(item => {\n//       item.appendTo('body')\n//     })\n//   }\n// }\n// // 动态导入\n// function getComponent() {\n//   return import(/* webpackPrefetch: true */ 'jquery').then(({ default: $ }) => {\n//     return $('<div></div>').html('我是main')\n//   })\n// }\n// import moment from 'moment'\n// // 手动引入\n// import 'moment/locale/zh-cn'\n// // 设置语言\n// moment.locale('zh-CN')\n// console.log(moment().subtract(6, 'days').calendar())\n// import vue from 'vue' // runtime-only 的 vue 包\nimport Vue from 'vue/dist/vue.js'; // 完整版的vuejs\n\nimport VueRouter from 'vue-router';\nVue.use(VueRouter);\nvar homeComponent = {\n  template: '<h2>我是homeaaa页面</h2>'\n};\nvar newsComponent = {\n  template: '<h2>我是newsheiheihei页面</h2>'\n};\nvar router = new VueRouter({\n  routes: [{\n    path: '/home',\n    component: homeComponent\n  }, {\n    path: '/news',\n    component: newsComponent\n  }]\n});\nnew Vue({\n  el: '#app',\n  data: {\n    msg: 'helloworld'\n  },\n  router: router\n}); // react\n// import React from 'react'\n// import ReactDOM from 'react-dom'\n// let reactNode = React.createElement('h1', null, '我很酷的！！')\n// ReactDOM.render(reactNode, document.getElementById('app'))"
+    }
+  ],
+  "filteredModules": 0,
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 2,
+      "debug": false
+    }
+  },
+  "children": [
+    {
+      "errors": [],
+      "warnings": [],
+      "publicPath": "/",
+      "outputPath": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\dist\\",
+      "assetsByChunkName": {
+        "HtmlWebpackPlugin_0": "__child-HtmlWebpackPlugin_0"
+      },
+      "assets": [
+        {
+          "name": "__child-HtmlWebpackPlugin_0",
+          "size": 4252,
+          "chunks": [
+            0
+          ],
+          "chunkNames": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "info": {},
+          "emitted": false
+        }
+      ],
+      "filteredAssets": 0,
+      "entrypoints": {
+        "HtmlWebpackPlugin_0": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "__child-HtmlWebpackPlugin_0"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "namedChunkGroups": {
+        "HtmlWebpackPlugin_0": {
+          "chunks": [
+            0
+          ],
+          "assets": [
+            "__child-HtmlWebpackPlugin_0"
+          ],
+          "children": {},
+          "childAssets": {}
+        }
+      },
+      "chunks": [
+        {
+          "id": 0,
+          "rendered": true,
+          "initial": true,
+          "entry": true,
+          "size": 544,
+          "names": [
+            "HtmlWebpackPlugin_0"
+          ],
+          "files": [
+            "__child-HtmlWebpackPlugin_0"
+          ],
+          "hash": "9ef7fb3286dc41c27f84",
+          "siblings": [],
+          "parents": [],
+          "children": [],
+          "childrenByOrder": {},
+          "modules": [
+            {
+              "id": 0,
+              "identifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\html-withimg-loader\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.html",
+              "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
+              "index": 0,
+              "index2": 0,
+              "size": 544,
+              "cacheable": true,
+              "built": true,
+              "optional": false,
+              "prefetched": false,
+              "chunks": [
+                0
+              ],
+              "issuer": null,
+              "issuerId": null,
+              "issuerName": null,
+              "issuerPath": null,
+              "profile": {
+                "factory": 24,
+                "building": 171
+              },
+              "failed": false,
+              "errors": 0,
+              "warnings": 0,
+              "assets": [],
+              "reasons": [
+                {
+                  "moduleId": null,
+                  "moduleIdentifier": null,
+                  "module": null,
+                  "moduleName": null,
+                  "type": "single entry",
+                  "userRequest": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.html",
+                  "loc": "HtmlWebpackPlugin_0"
+                }
+              ],
+              "usedExports": true,
+              "providedExports": null,
+              "optimizationBailout": [
+                "ModuleConcatenation bailout: Module is not an ECMAScript module"
+              ],
+              "depth": 0,
+              "source": "module.exports = \"<!DOCTYPE html>\\r<html lang=\\\"en\\\">\\r<head>\\r  <meta charset=\\\"UTF-8\\\">\\r  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\r  <meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"ie=edge\\\">\\r  <title>Document</title>\\r</head>\\r<body>\\r  <div id=\\\"app\\\">\\r    <h1 v-text=\\\"msg\\\"></h1>\\r    <router-link to=\\\"/home\\\">去首页</router-link>\\r    <router-link to=\\\"/news\\\">去新闻</router-link>\\r    <router-view></router-view>\\r  </div>\\r  <button id=\\\"btn\\\">点我加一个div</button>\\r</body>\\r</html>\""
+            }
+          ],
+          "filteredModules": 0,
+          "origins": [
+            {
+              "module": "",
+              "moduleIdentifier": "",
+              "moduleName": "",
+              "loc": "HtmlWebpackPlugin_0",
+              "request": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.html",
+              "reasons": []
+            }
+          ]
+        }
+      ],
+      "modules": [
+        {
+          "id": 0,
+          "identifier": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\html-withimg-loader\\index.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.html",
+          "name": "./node_modules/html-webpack-plugin/lib/loader.js!./src/index.html",
+          "index": 0,
+          "index2": 0,
+          "size": 544,
+          "cacheable": true,
+          "built": true,
+          "optional": false,
+          "prefetched": false,
+          "chunks": [
+            0
+          ],
+          "issuer": null,
+          "issuerId": null,
+          "issuerName": null,
+          "issuerPath": null,
+          "profile": {
+            "factory": 24,
+            "building": 171
+          },
+          "failed": false,
+          "errors": 0,
+          "warnings": 0,
+          "assets": [],
+          "reasons": [
+            {
+              "moduleId": null,
+              "moduleIdentifier": null,
+              "module": null,
+              "moduleName": null,
+              "type": "single entry",
+              "userRequest": "C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\node_modules\\html-webpack-plugin\\lib\\loader.js!C:\\Users\\Administrator\\Desktop\\webpack\\webpack-basic-js\\src\\index.html",
+              "loc": "HtmlWebpackPlugin_0"
+            }
+          ],
+          "usedExports": true,
+          "providedExports": null,
+          "optimizationBailout": [
+            "ModuleConcatenation bailout: Module is not an ECMAScript module"
+          ],
+          "depth": 0,
+          "source": "module.exports = \"<!DOCTYPE html>\\r<html lang=\\\"en\\\">\\r<head>\\r  <meta charset=\\\"UTF-8\\\">\\r  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\r  <meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"ie=edge\\\">\\r  <title>Document</title>\\r</head>\\r<body>\\r  <div id=\\\"app\\\">\\r    <h1 v-text=\\\"msg\\\"></h1>\\r    <router-link to=\\\"/home\\\">去首页</router-link>\\r    <router-link to=\\\"/news\\\">去新闻</router-link>\\r    <router-view></router-view>\\r  </div>\\r  <button id=\\\"btn\\\">点我加一个div</button>\\r</body>\\r</html>\""
+        }
+      ],
+      "filteredModules": 0,
+      "logging": {
+        "webpack.buildChunkGraph.visitModules": {
+          "entries": [],
+          "filteredEntries": 2,
+          "debug": false
+        }
+      },
+      "children": [],
+      "name": "HtmlWebpackCompiler"
+    }
+  ]
+}

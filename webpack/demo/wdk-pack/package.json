@@ -1,0 +1,22 @@
+{
+  "name": "wdk-pack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "wdk-pack": "./bin/wdk-pack.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/generator": "^7.9.5",
+    "@babel/parser": "^7.9.4",
+    "@babel/traverse": "^7.9.5",
+    "ejs": "^3.0.2",
+    "tapable": "^1.1.3"
+  }
+}
