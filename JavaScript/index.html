@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <div class="page" id="page" :class="{'changed':changed === true}">
     <div id="page1" :class="{'changed':changed === true}">
@@ -18,21 +20,21 @@
       data: {
         changed: false
       },
-      mounted: function() {
+      mounted: function () {
         this.el = document.getElementById("page1");
         this.el.className += ' page-show';
         console.log(this.el)
       },
       methods: {
-        onclick: function() {
-          console.log('1',page.el.className)
+        onclick: function () {
+          console.log('1', page.el.className)
           this.changed = true;
           // 还没修改dom,需要真实dom加载完的回调
           // this.$nextTick(()=>{
-            console.log('2',page.el.className)
+          console.log('2', page.el.className)
           // })  
           setTimeout(() => {
-            console.log('3',page.el.className)
+            console.log('3', page.el.className)
           }, 0);
         }
       },
@@ -42,4 +44,5 @@
     })
   </script>
 </body>
+
 </html>

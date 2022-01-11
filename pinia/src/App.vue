@@ -3,6 +3,12 @@ import PinIa from './components/PinIa.vue'
 </script>
 
 <template>
+  宏任务
+  同步
+  同步
+  异步微任务
+  异步微任务
+  同步
   <PinIa />
 </template>
 
