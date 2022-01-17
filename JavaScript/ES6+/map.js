@@ -6,6 +6,7 @@ let _typeof = function (data) {
 }
 var kvArray = ["1", "2", "3", 12, 20, 20];
 var reformattedArray = kvArray.map(function (arg1, arg2, arg3) {
+  console.log(arg1, arg2, arg3);
   console.log(`
   arg1:${arg1}, ${_typeof(arg1)}
   arg2:${arg2}, ${_typeof(arg2)}
@@ -13,4 +14,4 @@ var reformattedArray = kvArray.map(function (arg1, arg2, arg3) {
   `)
   return parseInt(arg1, arg2, arg3)
 });
-console.log('---', reformattedArray)
+// console.log('---', reformattedArray)
