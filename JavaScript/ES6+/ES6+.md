@@ -10,7 +10,7 @@
 
    `暂时性死区`问题说明：其实`let和const`是有变量提升的，但是没有初始化提升：
 
-   ```javascript
+   ```js
    var name = "吴";
    function fn() {
      console.log(name);
@@ -21,7 +21,7 @@
 
    块级作用域解决问题：
 
-   ```javascript
+   ```js
    for (var i = 0; i < 5; i++) {
      setTimeout(() => {
        console.log(i);
@@ -37,7 +37,7 @@
 2. 默认参数
    开发中你曾遇到过这样的问题，如果参数不传进来，你就设置默认参数
 
-   ```javascript
+   ```js
    function fn(name, age) {
      var name = name || "吴";
      var age = age || 18;
@@ -48,7 +48,7 @@
 
    但是这么写确实不优雅，可以使用 es6 的默认参数
 
-   ```javascript
+   ```js
    function fn(name = "吴", age = 18) {
      console.log(name, age);
    }
@@ -58,7 +58,7 @@
 
 3. 扩展运算符
 
-   ```javascript
+   ```js
    const arr1 = [1, 2, 4];
    const arr2 = [4, 5, 7];
    const arr3 = [7, 8, 9];
@@ -72,7 +72,7 @@
 
 4. 剩余参数
 
-   ```javascript
+   ```js
    function fn(name, ...params) {
      console.log(name);
      console.log(params);
@@ -83,7 +83,7 @@
 
 5. 模板字符串
 
-   ```javascript
+   ```js
    const name = "吴";
    const age = "24";
 
@@ -95,7 +95,7 @@
 
    可以用来获取对象的 key 的集合，进而可以获得对应 key 的 value
 
-   ```javascript
+   ```js
    const obj = {
      name: "吴",
      age: 24,
@@ -107,7 +107,7 @@
 
 7. 箭头函数
 
-   ```javascript
+   ```js
    function fn() {}
    const fn = function () {};
 
@@ -134,7 +134,7 @@
 
    ES6 新加的数组遍历方法
 
-   ```javascript
+   ```js
    const eachArr = [1, 2, 3, 4, 5];
 
    // 三个参数：遍历项 索引 数组本身
@@ -153,7 +153,7 @@
 
    常用于返回一个处理过后的新数组
 
-   ```javascript
+   ```js
    const mapArr = [1, 2, 3, 4, 5];
    // 三个参数：遍历项 索引 数组本身
    // 配合箭头函数，对每一个元素进行翻倍
@@ -165,7 +165,7 @@
 
     常用于返回一个处理过后的新数组
 
-    ```javascript
+    ```js
     const mapArr = [1, 2, 3, 4, 5];
     // 三个参数：遍历项 索引 数组本身
     // 配合箭头函数，对每一个元素进行翻倍
@@ -177,7 +177,7 @@
 
     some，意思就是只要有一个是真，那就返回真
 
-    ```javascript
+    ```js
     const someArr = [false, true, false, true, false];
 
     // 三个参数：遍历项 索引 数组本身
@@ -191,7 +191,7 @@
 
     every 跟 some 是相反的，some 是只要有一个就行，every 是要所有为真才返回真
 
-    ```javascript
+    ```js
     const everyArr = [false, true, false, true, false];
     // 三个参数：遍历项 索引 数组本身
     // 配合箭头函数，需要所有为true，才返回true，否则返回false
@@ -204,7 +204,7 @@
     - 第一个参数 callback 函数：pre 为上次 return 的值，next 为数组的本次遍历的项
     - 第二个参数为初始值，也是第一个 pre
 
-    ```javascript
+    ```js
     // 计算 1 + 2 + 3 + 4 + 5
     const reduceArr = [1, 2, 3, 4, 5];
     const sum = reduceArr.reduce((pre, next) => {
@@ -227,7 +227,7 @@
 
 14. 对象属性同名简写
 
-    ```javascript
+    ```js
     // 以前同名属性需要这么写
     const name = "wu";
     const age = "24";
@@ -252,7 +252,7 @@
 
 16. class
 
-    ```javascript
+    ```js
     // 构造函数生成对象
     function Person(name) {
       this.name = name;
@@ -280,7 +280,7 @@
 
 17. 解构赋值
 
-    ```javascript
+    ```js
     const obj = {
       name: "wu",
       age: 24,
@@ -305,7 +305,7 @@
 
     进行数组的解构
 
-    ```javascript
+    ```js
     const arr = [1, 2, 3];
     const [a1, b1, c1] = arr;
     console.log(a1, b1, c1); // 1 2 3
@@ -322,7 +322,7 @@
     - find: 找到返回被找元素,找不到返回 undefined
     - findIndex: 找到返回被找元素索引,找不到返回-1
 
-    ```javascript
+    ```js
     const findArr = [
       { name: "科比", no: "24" },
       { name: "罗斯", no: "1" },
@@ -340,7 +340,7 @@
     - for in：遍历方法，可遍历对象和数组，遍历的索引（即键名）
     - for of：遍历方法，只遍历数组，而不包括数组的原型属性 method 和索引 name，遍历的值
 
-    ```javascript
+    ```js
     const obj = { name: "wu", age: 22, gender: "男" };
     const arr = [1, 2, 3, 4, 5];
 
@@ -360,7 +360,7 @@
 
 20. Set 和 Map
 
-    ```javascript
+    ```js
     // 可不传数组
     const set1 = new Set();
     set1.add(1);
@@ -383,7 +383,7 @@
 
     Set 的不重复性
 
-    ```javascript
+    ```js
     // 增加一个已有元素，则增加无效，会被自动去重
     const set1 = new Set([1]);
     set1.add(1);
@@ -409,7 +409,7 @@
 
     利用 Set 的不重复性，可以实现数组去重
 
-    ```javascript
+    ```js
     const arr = [1, 2, 3, 4, 4, 5, 5, 66, 9, 1];
     // Set可利用扩展运算符转为数组哦
     const quChonGArr = [...new Set(arr)];
@@ -418,7 +418,7 @@
 
     Map 对比 object 最大的好处就是，key 不受类型限制
 
-    ```javascript
+    ```js
     // 定义map
     const map1 = new Map();
     // 新增键值对使用set(key, value)
@@ -441,4 +441,397 @@
       ["哈哈", "嘻嘻嘻"],
     ]);
     console.log(map2); // Map(3) { true => 1, 1 => 2, '哈哈' => '嘻嘻嘻' }
+    ```
+
+21. includes
+
+    传入元素，如果数组中能找到此元素，则返回 true，否则返回 false
+
+    ```js
+    const includesArr = [1, 2, 3, 5];
+    const isI = includesArr.includes(1);
+    console.log(isI); // true
+
+    // 跟indexOf很像，但还是有区别的
+    const arr = [1, 2, NaN];
+    console.log(arr.indexOf(NaN)); // -1  indexOf找不到NaN
+    console.log(arr.includes(NaN)); // true includes能找到NaN
+    ```
+
+22. 求幂运算符
+
+    ```js
+    // 以前求幂，我们需要这么写
+    const num = Math.pow(3, 2); // 9
+
+    // ES7提供了求幂运算符：**
+    const num = 3 ** 2; // 9
+    ```
+
+23. Object.values
+
+    ```js
+    // 用来获取对象的value的集合
+    const obj = {
+      name: "wu",
+      age: 24,
+    };
+    const value = Object.values(obj);
+    console.log(value); // ['wu',24]
+    ```
+
+24. Object.entries
+
+    ```js
+    // 可以用来获取对象的键值对集合
+    const obj = {
+      name: "wu",
+      age: 24,
+    };
+    const entries = Object.entries(obj);
+    console.log(entries);
+    // [ [ 'name', 'wu' ], [ 'age', 24 ] ]
+    ```
+
+25. async/await `以同步方式执行异步操作`
+
+    ```js
+    function fn1() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(5);
+        }, 1000);
+      });
+    }
+    function fn2(data) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(data * 10);
+        }, 2000);
+      });
+    }
+    async function req() {
+      // 同步方式执行异步，像排队一样
+      const data1 = await fn1(); // 等待1秒后返回数据再往下执行
+      const data2 = await fn2(data1); // 拿data1去请求2秒后，往下走
+      console.log(data2); // 总共3秒后 输出 50
+    }
+    req();
+    ```
+
+26. for await of
+
+    ```js
+    function fn(time) {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(`${time}毫秒后我成功啦！！！`);
+        }, time);
+      });
+    }
+    fn(3000).then((res) => console.log(res));
+    fn(1000).then((res) => console.log(res));
+    fn(2000).then((res) => console.log(res));
+    // 1000毫秒后我成功啦！！！
+    // 2000毫秒后我成功啦！！！
+    // 3000毫秒后我成功啦！！！
+    async function asyncFn() {
+      // 排队
+      const data1 = await fn(3000);
+      console.log(data1); // 3秒后 3000毫秒后我成功啦！！！
+      const data2 = await fn(1000);
+      console.log(data2); // 再过1秒 1000毫秒后我成功啦！！！
+      const data3 = await fn(2000);
+      console.log(data3); // 再过2秒 2000毫秒后我成功啦！！！
+    }
+    async function asyncFn() {
+      const arr = [fn(3000), fn(1000), fn(1000), fn(2000), fn(500)];
+      for await (let x of arr) {
+        console.log(x);
+      }
+    }
+    asyncFn();
+    // 3000毫秒后我成功啦！！！
+    // 1000毫秒后我成功啦！！！
+    // 1000毫秒后我成功啦！！！
+    // 2000毫秒后我成功啦！！！
+    // 500毫秒后我成功啦！！！
+    ```
+
+27. Promise.finally
+
+    `新增的Promise方法，无论失败或者成功状态，都会执行这个函数`
+
+    ```js
+    new Promise((resolve, reject) => {
+      resolve("成功喽");
+    })
+      .then(
+        (res) => {
+          console.log(res);
+        },
+        (err) => {
+          console.log(err);
+        }
+      )
+      .finally(() => {
+        console.log("我是finally");
+      });
+
+    new Promise((resolve, reject) => {
+      reject("失败喽");
+    })
+      .then(
+        (res) => {
+          console.log(res);
+        },
+        (err) => {
+          console.log(err);
+        }
+      )
+      .finally(() => {
+        console.log("我是finally");
+      });
+    ```
+
+28. Array.flat
+
+    ```js
+    // 有一个二维数组，我想让他变成一维数组
+    const arr = [1, 2, 3, [4, 5, 6]];
+    console.log(arr.flat()); // [ 1, 2, 3, 4, 5, 6 ]
+
+    // 传参数，参数为降维的次数
+    const arr = [1, 2, 3, [4, 5, 6, [7, 8, 9]]];
+    console.log(arr.flat(2)); // [(1, 2, 3, 4, 5, 6, 7, 8, 9)];
+
+    // 如果传的是一个无限的数字
+    const arr = [1, 2, 3, [4, 5, 6, [7, 8, 9, [10, 11, 12]]]];
+    console.log(arr.flat(Infinity)); // [(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)];
+    ```
+
+29. Array.flatMap
+
+    ```js
+    let arr = ["科比 詹姆斯 安东尼", "利拉德 罗斯 麦科勒姆"];
+    console.log(arr.map((x) => x.split(" ")).flat());
+    // [ '科比', '詹姆斯', '安东尼', '利拉德', '罗斯', '麦科勒姆' ]
+
+    console.log(arr.flatMap((x) => x.split(" ")));
+    // [ '科比', '詹姆斯', '安东尼', '利拉德', '罗斯', '麦科勒姆' ]
+    ```
+
+30. BigInt
+    BigInt 是 ES10 新加的一种 js 数据类型，用来表示表示大于 2^53 - 1 的整数，2^53 - 1 是 ES10 之前，js 所能表示最大的数字
+    Number、String、Boolean、undefined、object、Null、Symbol、BigInt。
+
+    ```js
+    const theBiggestInt = 9007199254740991n;
+    const alsoHuge = BigInt(9007199254740991);
+    // 9007199254740991n
+    const hugeString = BigInt("9007199254740991");
+    // 9007199254740991n
+    const hugeHex = BigInt("0x1fffffffffffff");
+    // 9007199254740991n
+    const hugeBin = BigInt(
+      "0b11111111111111111111111111111111111111111111111111111"
+    );
+    // 9007199254740991n
+    const bigNum = BigInt(1728371927189372189739217);
+    console.log(typeof bigNum); // bigint
+    ```
+
+31. Symbol
+
+    - 使用 Symbol 来作为对象属性名
+
+    ```js
+    const obj = {
+      name: "wu",
+      age: 24,
+    };
+    console.log(obj["name"]); // 'wu'
+    console.log(obj["age"]); // 24
+    // 用Symbol来当做属性名
+    const gender = Symbol("gender");
+    const obj1 = {
+      name: "wu",
+      age: 24,
+      [gender]: "男",
+    };
+    console.log(obj1["name"]); // 'wu'
+    console.log(obj1["age"]); // 24
+    console.log(obj1[gender]); // 男
+
+    // 但是 Symbol 作为属性的属性不会被枚举出来，这也是 JSON.stringfy(obj)时，Symbol 属性会被排除在外的原因
+    console.log(Object.keys(obj1)); // [ 'name', 'age' ]
+    for (const key in obj1) {
+      console.log(key); // name age
+    }
+    console.log(JSON.stringify(obj1)); // {"name":"wu","age":24}
+
+    // 其实想获取Symbol属性也不是没办法。
+    // 方法一
+    console.log(Object.getOwnPropertySymbols(obj)); // [ Symbol(gender) ]
+    // 方法二
+    console.log(Reflect.ownKeys(obj)); // [ 'name', 'age', Symbol(gender) ]
+    ```
+
+    - 使用 Symbol 来替代常量
+
+    ```js
+    // 赋值
+    const one = "oneXin";
+    const two = "twoXin";
+    function fun(key) {
+      switch (key) {
+        case one:
+          return "one";
+          break;
+        case two:
+          return "two";
+          break;
+      }
+    }
+    // 如果变量少的话还好，但是变量多的时候，赋值命名很烦，可以利用Symbol的唯一性
+    const one = Symbol();
+    const two = Symbol();
+    ```
+
+    - 定义类的私有属性
+
+    ```js
+    class Login {
+      constructor(username, password) {
+        const PASSWORD = Symbol();
+        this.username = username;
+        this[PASSWORD] = password;
+      }
+      checkPassword(pwd) {
+        return this[PASSWORD] === pwd;
+      }
+    }
+    const login = new Login("123456", "hahah");
+    console.log(login.PASSWORD); // undefined
+    console.log(login[PASSWORD]); // 报错
+    console.log(login.checkPassword()); // 报错
+    ```
+
+32. 对象计算属性
+
+    ```js
+    if (type === "boy") {
+      this.setData({
+        boyName: name,
+      });
+    } else if (type === "girl") {
+      this.setData({
+        girlName: name,
+      });
+    }
+
+    //
+    this.setData({
+      [`${type}Name`]: name,
+    });
+    ```
+
+33. ||= 和 &&=
+
+    ```js
+    // 或等于(||=)
+    a ||= b;
+    //等同于
+    a || (a = b);
+
+    // 且等于(&&=)
+    a &&= b;
+    //等同于
+    a && (a = b);
+    ```
+
+34. 数字分隔符
+
+    ```js
+    const num = 1000000000;
+
+    // 使用数字分隔符
+    const num = 1_000_000_000;
+    ```
+
+35. ?. 和 ??
+
+    - ?.可选链
+
+    ```js
+    const obj = {
+      cat: {
+        name: "哈哈",
+      },
+    };
+    const dog = obj && obj.dog && obj.dog.name; // undefined
+    // 可选链
+    const obj = {
+      cat: {
+        name: "哈哈",
+      },
+    };
+    const dog = obj?.dog?.name; // undefined
+    ```
+
+    - ?? 空位合并运算符
+
+    ```js
+    // || 运算符，只要左边是 假值,就会返回右边的数据
+    const a = 0 || "wu"; // wu
+    const b = "" || "wu"; // wu
+    const c = false || "wu"; // wu
+    const d = undefined || "wu"; // wu
+    const e = null || "wu"; // wu
+    // ?? 和 ||最大的区别就是，??只有undefined和null才算假值
+    const a = 0 ?? "wu"; // 0
+    const b = "" ?? "wu"; // ''
+    const c = false ?? "wu"; // false
+    const d = undefined ?? "wu"; // wu
+    const e = null ?? "wu"; // wu
+    ```
+
+36. String.trimStart && String.trimEnd
+
+    ```js
+    // JavaScript有个trim方法，可以清除字符串首尾的空格
+    const str = "    wu    ";
+    console.log(str.trim()); // 'wu'
+
+    //trimStart和trimEnd用来单独去除字符串的首和尾的空格
+    // 去除首部空格
+    console.log(str.trimStart()); // 'wu   '
+    // 去除尾部空格
+    console.log(str.trimEnd()); // '   wu'
+    ```
+
+37. Object.fromEntries
+
+    Object.entries 是把`对象转成键值对数组`，而 Object.fromEntries 则是相反，是把`键值对数组转为对象`
+
+    ```js
+    const arr1 = [
+      ["name", "wu"],
+      ["age", 22],
+      ["gender", "男"],
+    ];
+    console.log(Object.fromEntries(arr1)); // { name: 'wu', age: 22, gender: '男' }
+
+    const map = new Map();
+    map.set("name", "wu");
+    map.set("age", 22);
+    map.set("gender", "男");
+
+    console.log(map); // Map(3) { 'name' => 'wu', 'age' => 22, 'gender' => '男' }
+    const obj = Object.fromEntries(map);
+    console.log(obj);
+    // { name: 'wu', age: 22, gender: '男' }
+    const arr = Object.entries(obj);
+    console.log(arr);
+    // [["name", "wu"],  ["age", 22],  ["gender", "男"],];
     ```
