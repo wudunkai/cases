@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import PinIa from './components/PinIa.vue'
+import handleUpload from './components/handleUpload.vue'
 
 </script>
 
 <template>
-  <PinIa />
+  <PinIa>
+    <template #user>user</template>
+    <template #login>login</template>
+  </PinIa>
+  <handleUpload />
 </template>
 
 <style>
