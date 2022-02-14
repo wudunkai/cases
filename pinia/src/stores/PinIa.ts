@@ -13,6 +13,18 @@ export const useUserStore = defineStore({
       });
     },
   },
+  // 开启数据缓存
+  // 数据默认存在sessionStorage里，并且会以store的id作为key
+  persist: {
+    enabled: true,
+    // strategies: [
+    //   {
+    //     key: "my_user",
+    //     storage: localStorage,
+    //     paths: ["name"],
+    //   },
+    // ],
+  },
 });
 
 if (import.meta.hot) {
