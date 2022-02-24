@@ -1,0 +1,10 @@
+- vue2 对 ts 支持较差，vue3 时已解决
+- vue2 对 jsx 支持较差，vue3 时已解决
+- vue 和 react 都是单向数据流
+- vue 多用模板 template，react 多用 jsx
+- vue 的双向绑定，react 是单向绑定
+- vue 和 react 都倡导组件化开发
+- vue 和 react 都支持服务端渲染
+- vue2 的状态管理工具 vuex，vue3 用 pinia，react 用 redux、mobx、recoil
+- vue 的 diff 算法比 react 更高效
+- react 的写法更贴近 js 原生

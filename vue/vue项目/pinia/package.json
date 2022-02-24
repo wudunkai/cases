@@ -15,12 +15,15 @@
     "pinia": "^2.0.9",
     "pinia-persistedstate-plugin": "^0.0.7",
     "pinia-plugin-persist": "^0.0.93",
-    "vue": "^3.2.25"
+    "vant": "^3.4.5",
+    "vue": "^3.2.25",
+    "vue3-hooks-plus": "^2.1.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.0",
     "typescript": "^4.4.4",
     "vite": "^2.7.2",
+    "vite-plugin-style-import": "1.4.1",
     "vue-tsc": "^0.29.8"
   }
 }

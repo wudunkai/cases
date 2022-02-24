@@ -9,7 +9,7 @@ import App from "./App.vue";
 
 const app = createApp(App);
 const store = createPinia();
-// store.use(createPersistedState());
+
 store.use(piniaPluginPersist);
 
 app.use(ElementPlus).use(store).mount("#app");

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+
 <body>
   <div id="app">
     <h2>{{person.name}} -- {{person.age}}</h2>
@@ -27,22 +29,23 @@
   <script>
     let vm = new MVue({
       el: '#app',
-      data:{
-        person:{
-          name:"珍",
-          age: 16,
-          fav: '姑娘'
+      data: {
+        person: {
+          name: "小野",
+          age: 20,
+          fav: '小孩'
         },
         msg: '学习MVVM实现原理',
         htmlStr: '<h1>htmlStr</h1>'
       },
       methods: {
-        gettest(){
-          this.person.name = '曾珍'
-          console.log(1,this)
+        gettest() {
+          this.person.name = '小莫'
+          console.log(1, this)
         }
       },
     })
   </script>
 </body>
+
 </html>
