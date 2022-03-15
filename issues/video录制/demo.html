@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    video {
+      width: 400px;
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <video src="./video.mp4" id="leftVideo" controls="controls"></video>
+  <video id="rightVideo" controls="controls"></video>
+  <button id="btn" click="btn">下载</button>
+  <script src="https://www.webrtc-experiment.com/EBML.js"></script>
+  <script>
+    // sketch.js
+
+    const bodyEl = document.getElementsByTagName("body")[0]
+
+    const recordBtn = document.createElement('button')
+
+    recordBtn.innerHTML = '⏺️ Start record'
+
+    bodyEl.append(recordBtn)
+
+
+    const videoChunks = [];
+
+    let videoRecorder;
+
+    let isRecording = false;
+
+    let recordingTime = 0
+
+    let recordBtnTimer
+
+    let captureFrameRate = 50
+
+
+    const startRecord = () => {
+
+      videoChunks.length = 0;
+
+      // 1.读取canvas视频流
+
+      let stream = document.querySelector('#leftVideo').captureStream(captureFrameRate);
+
+      // 2.创建视频录制器
+
+      const options = { mimeType: 'video/webm;codecs=vp8' };
+
+      videoRecorder = new MediaRecorder(stream, options);
+
+      videoRecorder.ondataavailable = e => {
+
+        if (e.data.size) {
+
+          videoChunks.push(e.data);
+
+        }
+
+      };
+
+      videoRecorder.onstop = exportVideo;
+
+      // 3.开始录制
+
+      videoRecorder.start();
+
+
+      // 4.改变按钮状态
+
+      recordBtn.onclick = stopRecord
+
+      isRecording = true;
+
+      recordBtn.textContent = '🔴 Recording 0s';
+
+      recordBtnTimer = setInterval(() => { // Update recording text every second
+
+        recordingTime += 1
+
+        recordBtn.textContent = `🔴 Recording ${recordingTime}s`
+
+      }, 1000)
+
+    }
+
+
+    const stopRecord = () => {
+
+      videoRecorder.stop();
+
+      isRecording = false;
+
+      recordBtn.textContent = '⏺️ Start record';
+
+      clearInterval(recordBtnTimer) // clear timer
+
+      recordingTime = 0
+
+      recordBtn.onclick = startRecord;
+
+    }
+
+
+    const exportVideo = () => {
+
+      let blob = new Blob(videoChunks, { "type": "video/webm;codecs=vp8;" });
+
+      const { Decoder, tools, Reader } = EBML
+
+      const reader = new Reader()
+
+      const decoder = new Decoder()
+
+
+      const fileReader = new FileReader()
+
+      fileReader.onload = function () {
+
+        // 1.解析视频blob
+        console.log(this.result);
+        const ebmlList = decoder.decode(this.result)
+
+        ebmlList.forEach(item => reader.read(item))
+
+        reader.stop()
+
+        // 2.获取元数据
+
+        const refinedMetadataBuf = tools.makeMetadataSeekable(
+
+          reader.metadatas,
+
+          reader.duration,
+
+          reader.cues
+
+        )
+
+        // 3.获取元数据大小
+
+        const body = this.result.slice(reader.metadataSize)
+
+        // 4.写入元数据
+
+        const newBlob = new Blob([refinedMetadataBuf, body], {
+
+          type: 'video/webm;'
+
+        })
+
+        // 5.将blob转成url
+        const refinedUrl = URL.createObjectURL(newBlob)
+
+        // 6.自动下载
+        let a = document.createElement('a')
+        a.href = refinedUrl;
+        a.style = "display: none";
+        a.download = `${new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')}.webm`;
+        a.click();
+      }
+      fileReader.readAsArrayBuffer(blob)
+    }
+    recordBtn.onclick = startRecord;
+
+
+  </script>
+  <!-- <script>
+    var leftVideo = document.getElementById('leftVideo');
+    var rightVideo = document.getElementById('rightVideo');
+    var btn = document.getElementById('btn');
+
+    let buffer = [], stream;
+    leftVideo.onplay = function () {
+      stream = leftVideo.captureStream();
+      streamLists()
+    };
+    function streamLists() {
+      let mediaRecorder = new MediaRecorder(stream);
+      mediaRecorder.ondataavailable = (e) => {
+        buffer.push(e.data);
+      }
+      mediaRecorder.start(10);
+    }
+    btn.addEventListener("click", function () {
+      var blob = new Blob(buffer, { type: 'video/webm' });
+      var url = window.URL.createObjectURL(blob);
+      rightVideo.src = url
+      var a = document.createElement('a'); a.download = ''; a.href = url; a.click()
+    })
+
+  </script>
+  <script>
+    // 定义一个深拷贝函数  接收目标target参数
+    function deepClone(target) {
+      // 定义一个变量
+      let result;
+      // 如果当前需要深拷贝的是一个对象的话
+      if (typeof target === 'object') {
+        // 如果是一个数组的话
+        if (Array.isArray(target)) {
+          result = []; // 将result赋值为一个数组，并且执行遍历
+          for (let i in target) {
+            // 递归克隆数组中的每一项
+            result.push(deepClone(target[i]))
+          }
+          // 判断如果当前的值是null的话；直接赋值为null
+        } else if (target === null) {
+          result = null;
+          // 判断如果当前的值是一个RegExp对象的话，直接赋值    
+        } else if (target.constructor === RegExp) {
+          result = target;
+        } else {
+          // 否则是普通对象，直接for in循环，递归赋值对象的所有值
+          result = {};
+          for (let i in target) {
+            result[i] = deepClone(target[i]);
+          }
+        }
+        // 如果不是对象的话，就是基本数据类型，那么直接赋值
+      } else {
+        result = target;
+      }
+      // 返回最终结果
+      return result;
+    }
+  </script> -->
+</body>
+
+</html>

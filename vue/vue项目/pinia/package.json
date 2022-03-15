@@ -7,14 +7,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "amfe-flexible": "^2.2.1",
     "axios": "^0.20.0-0",
-    "element-plus": "^2.0.1",
+    "crypto-js": "^4.1.1",
+    "element-plus": "^2.0.5",
     "fs-extra": "^10.0.0",
     "lodash": "^4.17.21",
     "multiparty": "^4.2.3",
     "pinia": "^2.0.9",
     "pinia-persistedstate-plugin": "^0.0.7",
     "pinia-plugin-persist": "^0.0.93",
+    "postcss-pxtorem": "^6.0.0",
     "vant": "^3.4.5",
     "vue": "^3.2.25",
     "vue3-hooks-plus": "^2.1.4"

@@ -1,3 +1,4 @@
+import "amfe-flexible";
 import { createApp } from "vue";
 import { createPinia } from "pinia";
 // import { createPersistedState } from "pinia-persistedstate-plugin";
