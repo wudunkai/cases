@@ -25,7 +25,11 @@ export const useRouteStore = defineStore({
       }
       console.log("路由添加后", router.getRoutes());
     },
-
+    async login(userName: string) {
+      this.$patch({
+        userName,
+      });
+    },
     //注销
     async logout(routerList: Array<any>) {
       return new Promise((resolve) => {
