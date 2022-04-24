@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import handleUpload from '../components/handleUpload.vue';
+import handleUpload from "../components/handleUpload.vue";
 </script>
 
 <template>
