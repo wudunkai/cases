@@ -23,6 +23,7 @@ const getList = () => {
   let fn2 = api.getList({ name: "tom" });
   Axios.all([fn1, fn2]).then(
     Axios.spread((res1, res2) => {
+      console.log(res1, res2);
       // console.log("一秒后获取到数据");
       if (res1.statusCode == 1 && res2.statusCode == 1)
         list.value = [...res1.data, ...res2.data];

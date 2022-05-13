@@ -28,6 +28,7 @@ router.post("/login", (req, res) => {
 
 // 退出
 router.get("/logout", (req, res) => {
+  res.header("Content-Type", "application/json; charset=utf-8");
   res.clearCookie("sessionid"); //退出登录时清楚sessionid
   const json = {
     statusCode: -1,
