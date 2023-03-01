@@ -23,8 +23,8 @@ export default defineConfig({
   },
   server: {
     hmr: { overlay: false },
-    port: 80, // 设置服务启动端口号
-    open: true, // 设置服务启动时是否自动打开浏览器
+    port: 8080, // 设置服务启动端口号
+    open: false, // 设置服务启动时是否自动打开浏览器
     cors: true, // 允许跨域
     // 设置代理，根据我们项目实际情况配置
     proxy: {

@@ -1,5 +1,6 @@
 // axios.js 文件
 import axios from "axios";
+import qs from "qs";
 import { addPending, removePending } from "./cancel";
 // api 基础路径（如无可以为空）
 const basePath = "/api";
@@ -34,6 +35,9 @@ http.interceptors.request.use(
     }
     removePending(config);
     config.headers.cancel && addPending(config);
+    // if (config.method === "post") {
+    //   config.data = qs.stringify(config.data);
+    // }
     return config;
   },
   (error) => {
@@ -68,6 +72,7 @@ http.interceptors.response.use(
     } */
     /* // 特殊处理：禁止短时间内多次弹出提示，遗憾的是效果不理想，后续测验优化
     // 1000毫秒内最多只展示一次报错信息
+    let 
     clearTimeout(timeout)
     timeout = setTimeout(() => {
       Message({

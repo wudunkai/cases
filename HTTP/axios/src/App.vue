@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Axios from "axios";
 import { getCurrentInstance, ref } from "vue";
+// console.log(os);
 // 获取接口
 const instance = getCurrentInstance();
 const api = instance?.appContext.config.globalProperties.$api;
@@ -19,8 +20,8 @@ const logout = () => {
 // 获取列表
 const list = ref();
 const getList = () => {
-  let fn1 = api.getList();
-  let fn2 = api.getList({ name: "tom" });
+  let fn1 = api.getList(true);
+  let fn2 = api.getList({ name: "tom" }, true);
   Axios.all([fn1, fn2]).then(
     Axios.spread((res1, res2) => {
       console.log(res1, res2);
@@ -37,6 +38,5 @@ const getList = () => {
     <el-button @click="login">登录</el-button>
     <el-button @click="logout">退出</el-button>
     <el-button @click="getList">获取信息</el-button>
-    {{ list }}
   </el-row>
 </template>

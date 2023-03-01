@@ -154,7 +154,7 @@
 
         const newBlob = new Blob([refinedMetadataBuf, body], {
 
-          type: 'video/webm;'
+          type: 'video/mp4;'
 
         })
 
@@ -165,7 +165,7 @@
         let a = document.createElement('a')
         a.href = refinedUrl;
         a.style = "display: none";
-        a.download = `${new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')}.webm`;
+        a.download = `${new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')}.mp4`;
         a.click();
       }
       fileReader.readAsArrayBuffer(blob)

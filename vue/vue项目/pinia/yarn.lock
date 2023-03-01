@@ -271,6 +271,11 @@
   dependencies:
     vue-demi "*"
 
+"@wangeditor/editor-for-vue@^5.1.11":
+  version "5.1.11"
+  resolved "https://registry.yarnpkg.com/@wangeditor/editor-for-vue/-/editor-for-vue-5.1.11.tgz#2f2f7ec83c1ebea6c58d30a0e090988528c3924c"
+  integrity sha512-gzo6A9VMWKUVgOTtucNTplb7K1KUvnBoQ76AaB5vmh+9LXv+6jAI4QXADH46PVGwvQJcQ3zqZ/P1pIj/QthjYQ==
+
 acorn@^7.1.1:
   version "7.4.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
