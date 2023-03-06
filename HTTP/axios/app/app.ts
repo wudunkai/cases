@@ -1,11 +1,10 @@
 import express from "express";
 const app = express();
-
-app.use(express.urlencoded({ extended: false }));
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
 // 配置 cors 这个中间件
 import cors from "cors";
 app.use(cors());
-
 // session
 import session from "express-session";
 import FileStore from "session-file-store";
@@ -30,7 +29,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 import router from "./user.ts";
+import https from "./https.ts";
 app.use("/", router);
+app.use("/https", https);
 
 app.listen(7777, function () {
   console.log("http://localhost:7777/");

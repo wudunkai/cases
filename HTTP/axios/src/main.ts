@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
+import router from "./router";
 import "./style/index.css";
 const app = createApp(App);
 // 全局配置axios
@@ -7,4 +8,4 @@ const app = createApp(App);
 import api from "./api";
 app.config.globalProperties.$api = api;
 
-app.mount("#app");
+app.use(router).mount("#app");

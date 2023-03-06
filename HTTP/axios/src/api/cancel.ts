@@ -1,3 +1,4 @@
+import _ from "lodash";
 import axios from "axios";
 const pendingMap = new Map();
 
@@ -7,7 +8,9 @@ const pendingMap = new Map();
  * @returns string
  */
 function getPendingKey(config: any) {
-  const { url, method, params, data } = config;
+  const { url, method, params, data } = _.cloneDeep(config);
+  console.log(url, method, params, data, pendingMap);
+
   if (typeof data === "string") config.data = JSON.parse(data); // response里面返回的config.data是个字符串对象
   return [url, method, JSON.stringify(params), JSON.stringify(data)].join("&");
 }

@@ -33,11 +33,13 @@ http.interceptors.request.use(
     } else {
       config.headers["token"] = token || "";
     }
-    removePending(config);
-    config.headers.cancel && addPending(config);
+    // removePending(config);
+    // config.headers.cancel && addPending(config);
     // if (config.method === "post") {
     //   config.data = qs.stringify(config.data);
     // }
+    console.log(config);
+
     return config;
   },
   (error) => {
@@ -54,7 +56,7 @@ http.interceptors.request.use(
 http.interceptors.response.use(
   (response) => {
     const res = response.data;
-    removePending(response.config);
+    // removePending(response.config);
     // 特殊配置：code为 -10086，表示资源不存在，跳转到提示页（404）
     if (res.code === -10086) {
       return res;
@@ -81,7 +83,7 @@ http.interceptors.response.use(
         duration: 5 * 1000
       })
     }, 1000) */
-    error.config && removePending(error.config);
+    // error.config && removePending(error.config);
     return Promise.reject(error);
   }
 );
@@ -89,17 +91,18 @@ http.interceptors.response.use(
  * post 请求
  * @param url 接口路径
  * @param params 接口参数
+ * @param data 接口参数
  * @returns {Promise<unknown>}
  */
-function post(url: string, params = {}, cancel?: boolean) {
+function post({ url, data, params, cancel, headers }: any) {
   return new Promise((resolve, reject) => {
     http({
       method: "post",
       url: url,
-      data: params,
+      params: params,
+      data: data,
       headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json;charset=UTF-8",
+        ...headers,
         cancel: cancel,
       },
     })
@@ -123,7 +126,7 @@ function get(url: string, params = {}, cancel?: boolean) {
     http({
       method: "get",
       url: url,
-      data: params,
+      params: params,
       headers: {
         cancel: cancel,
       },
@@ -143,15 +146,15 @@ function get(url: string, params = {}, cancel?: boolean) {
  * @param params 接口参数
  * @returns {Promise<unknown>}
  */
-function put(url: string, params = {}, cancel?: boolean) {
+function put({ url, data, params, cancel, headers }: any) {
   return new Promise((resolve, reject) => {
     http({
       method: "put",
       url: url,
-      data: params,
+      params: params,
+      data: data,
       headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json;charset=UTF-8",
+        ...headers,
         cancel: cancel,
       },
     })
@@ -191,31 +194,4 @@ function deleteJson(url: string, params = {}, cancel?: boolean) {
   });
 }
 
-/**
- * multipart post 请求 常用于文件上传
- * @param url 接口路径
- * @param params 接口参数
- * @returns {Promise<unknown>}
- */
-function postMultipart(url: string, params = {}, cancel?: boolean) {
-  return new Promise((resolve, reject) => {
-    http({
-      method: "post",
-      url: url,
-      data: params,
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "multipart/form-data;boundary=" + new Date().getTime(),
-        cancel: cancel,
-      },
-    })
-      .then((res) => {
-        resolve(res);
-      })
-      .catch((error) => {
-        reject(error);
-      });
-  });
-}
-
-export { basePath, http, post, get, put, deleteJson, postMultipart };
+export { basePath, http, post, get, put, deleteJson };
