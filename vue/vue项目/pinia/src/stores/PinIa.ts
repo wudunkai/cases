@@ -2,6 +2,7 @@
 import { defineStore, acceptHMRUpdate } from "pinia";
 import router from "../router";
 import { routes } from "../router";
+import { stringify, parse } from "zipson";
 export const useRouteStore = defineStore({
   id: "routes",
   state: () => ({
@@ -49,15 +50,31 @@ export const useRouteStore = defineStore({
   },
   // 开启数据缓存
   // 数据默认存在sessionStorage里，并且会以store的id作为key
+  // persist: {
+  //   enabled: true,
+  //   strategies: [
+  //     {
+  //       key: "my_user",
+  //       storage: localStorage,
+  //       paths: ["name"],
+  //     },
+  //   ],
+  // },
   persist: {
-    enabled: true,
-    strategies: [
-      {
-        key: "my_user",
-        storage: localStorage,
-        paths: ["name"],
-      },
-    ],
+    key: "my-custom-key",
+    storage: sessionStorage,
+    // paths: ['count'],
+    serializer: {
+      deserialize: parse,
+      serialize: stringify,
+    },
+    beforeRestore: (ctx) => {
+      console.log(ctx.store);
+    },
+    afterRestore: (ctx) => {
+      console.log(ctx.store);
+    },
+    debug: true,
   },
 });
 // import component from "../views/Video.vue";

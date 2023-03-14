@@ -18,11 +18,13 @@
     "pinia": "^2.0.9",
     "pinia-persistedstate-plugin": "^0.0.7",
     "pinia-plugin-persist": "^0.0.93",
+    "pinia-plugin-persistedstate": "^3.1.0",
     "postcss-pxtorem": "^6.0.0",
     "vant": "^3.4.5",
     "vue": "^3.2.25",
     "vue-router": "^4.0.14",
-    "vue3-hooks-plus": "^2.1.4"
+    "vue3-hooks-plus": "^2.1.4",
+    "zipson": "^0.2.12"
   },
   "devDependencies": {
     "@types/node": "^17.0.21",
