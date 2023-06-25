@@ -16,11 +16,11 @@ export const routes: Array<RouteRecordRaw> = [
     name: "home",
     component: () => import("../views/Home.vue"),
   },
-  {
-    path: "/Editor",
-    name: "Editor",
-    component: () => import("../views/Editor.vue"),
-  },
+  // {
+  //   path: "/Editor",
+  //   name: "Editor",
+  //   component: () => import("../views/Editor.vue"),
+  // },
 ];
 
 const router: Router = createRouter({
