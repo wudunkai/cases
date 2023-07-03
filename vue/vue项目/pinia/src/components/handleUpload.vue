@@ -90,9 +90,9 @@ const verifyUpload = async (fileName: string) => {
 const uploadChunks = async (uploadedList: Array<any>[]) => {
   const keepList = uploadedList.map(
     (item: any) =>
-    (item = {
-      chunkName: item,
-    })
+      (item = {
+        chunkName: item,
+      })
   );
   console.log(fileObj.chunkList, keepList);
   const requestList = _.differenceBy(fileObj.chunkList, keepList, "chunkName");
