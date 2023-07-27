@@ -58,19 +58,17 @@ app.use(async (ctx) => {
     ctx.set('Content-Type', 'text/html')
     ctx.body = await parseStatic('./index.html')
   } else {
-    // const filePath = path.resolve(__dirname, `.${url}`)
+    const filePath = path.resolve(__dirname, `.${url}`)
     // // 设置类型
     // ctx.set('Content-Type', parseMime(url))
     // // ? 设置 Expires 响应头
-    // // const time = new Date(Date.now() + 30000).toUTCString()
-    // // ctx.set('Expires', time)
+    // const time = new Date(Date.now() + 30000).toUTCString()
+    // ctx.set('Expires', time)
     // // ? 设置 Cache-Control 响应头
-    // // ctx.set('Cache-Control', 'max-age=30')
+    // ctx.set('Cache-Control', 'max-age=30')
     // // 设置传输
     // ctx.body = await parseStatic(filePath)
 
-
-    const filePath = path.resolve(__dirname, `.${url}`)
     // ?if-modified-since
     // const ifModifiedSince = ctx.request.header['if-modified-since']
     // const fileStat = await getFileStat(filePath)
